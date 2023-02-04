@@ -1,0 +1,199 @@
+/*
+Theme Name: Your WordPress Theme
+Theme URI: http://yourwebsite.com/
+Author: Your Name Here
+Author URI: http://yourwebsite.com/
+Description: This is your WordPress theme.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: your-wp-theme
+*/
+/* PUT GOOGLE FONT LINK BELOW */
+@import url('');
+/* CSS VARIABLES */
+:root {
+    --font-family: 'Work Sans', sans-serif;
+    --background-colour: #CEE5EB;
+    --main-colour: #124E83;
+    --paragraph-colour: #111111;
+    --link-colour: #4753FF;
+}
+/* GENERAL STUFF */
+body {
+	font-family: var(--font-family);
+	background-color: var(--background-colour);
+	line-height: 1.2;
+}
+a {
+	color: var(--link-colour);
+}
+p, li {
+	color: var(--paragraph-colour);
+	font-size: 18px;
+}
+/* TYPOGRAPHY */
+h1.post-title, h1.page-title {
+	text-align: center;
+	font-size: 50px;
+	color: var(--main-colour);
+}
+.align-center {
+	text-align: center;
+}
+/* NAVIGATION */
+.main-navigation {
+	display: block;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+	background-color: white;
+	display: block;
+}
+@media screen and (max-width: 800px) {
+	.main-navigation ul ul {
+		position: unset;
+		float: none;
+		width: auto !important;
+	}
+	.main-navigation ul ul a {
+		box-shadow: none;
+	}
+	.sub-menu a {
+		margin-left: 20px;
+	}
+	.sub-menu .sub-menu a {
+		margin-left: 40px;
+	}
+}
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	/* DO NOT UNCOMMENT THIS LINE unless you like overlapping menu options display: block; */
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+	color: var(--paragraph-colour);
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+	padding: 8px 16px;
+	color: var(--paragraph-colour);
+	transition: all 0.5s ease 0s;
+}
+
+.main-navigation a:hover {
+	background-color: var(--main-colour);
+	color: white;
+	transition: all 0.5s ease 0s;
+}
+
+.main-navigation a:focus {
+	background-color: var(--main-colour);
+	color: white;
+	font-weight: 700;
+	text-decoration: underline;
+}
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul,
+.main-navigation.toggled ul.sub-menu {
+	display: block;
+}
+
+@media screen and (min-width: 800px) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+
+	.main-navigation ul:first-child {
+		margin-left: 2%;
+		padding-left: 15px;
+	}
+	.main-navigation ul ul {
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	}
+}
+
+.menu-toggle {
+	width: auto;
+	border: none;
+	border-radius: 0px;
+	font-weight: 400;
+	padding: 12px 50px;
+	width: 95%;
+}
+/* MAIN CONTENT */
+.content {
+	max-width: 750px;
+	margin: 0 auto;
+}
+.post {
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.post h2 {
+	text-align: center;
+}
+/* COMPONENTS */
+.button {
+	padding: 8px 16px;
+	background-color: var(--main-colour);
+	color: var(--background-colour);
+	border: 2px solid var(--main-colour);
+	border-radius: 6px;
+	text-decoration: none;
+	margin-bottom: 20px;
+	transition: all 0.5s ease 0s;
+}
+.button:hover {
+	background-color: transparent;
+	color: var(--main-colour);
+	transition: all 0.5s ease 0s;
+}
+/* FOOTER */
+footer {
+	background-color: var(--main-colour);
+	width:100%;
+	padding: 15px;
+}
+footer p {
+	color: var(--background-colour);
+	text-align: center;
+}
