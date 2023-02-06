@@ -14,10 +14,10 @@ Text Domain: your-wp-theme
 /* CSS VARIABLES */
 :root {
     --font-family: 'Work Sans', sans-serif;
-    --background-colour: #CEE5EB;
-    --main-colour: #124E83;
+    --background-colour: white;
+    --main-colour: #111111;
     --paragraph-colour: #111111;
-    --link-colour: #4753FF;
+    --link-colour: blue;
 }
 /* GENERAL STUFF */
 body {
