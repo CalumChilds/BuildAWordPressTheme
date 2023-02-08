@@ -13,7 +13,7 @@ Text Domain: your-wp-theme
 @import url('');
 /* CSS VARIABLES */
 :root {
-    --font-family: 'Work Sans', sans-serif;
+    --font-family: 'Arial', sans-serif;
     --background-colour: white;
     --main-colour: #111111;
     --paragraph-colour: #111111;
