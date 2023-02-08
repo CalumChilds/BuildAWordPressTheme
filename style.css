@@ -13,7 +13,7 @@ Text Domain: your-wp-theme
 @import url('');
 /* CSS VARIABLES */
 :root {
-    --font-family: 'Arial', sans-serif;
+    --font-family: 'Work Sans', sans-serif;
     --background-colour: white;
     --main-colour: #111111;
     --paragraph-colour: #111111;
@@ -172,7 +172,7 @@ h1.post-title, h1.page-title {
 	text-align: center;
 }
 /* COMPONENTS */
-.button {
+.button, input[type="submit"] {
 	padding: 8px 16px;
 	background-color: var(--main-colour);
 	color: var(--background-colour);
@@ -182,10 +182,21 @@ h1.post-title, h1.page-title {
 	margin-bottom: 20px;
 	transition: all 0.5s ease 0s;
 }
-.button:hover {
+.button:hover, input[type="submit"]:hover {
 	background-color: transparent;
 	color: var(--main-colour);
 	transition: all 0.5s ease 0s;
+}
+input {
+	border: 2px solid var(--main-colour);
+	font-family: var(--font-family);
+	background-color: var(--background-colour);
+	font-size: 18px;
+	min-height: 50px;
+}
+.search-form {
+	max-width: 500px;
+	margin: 0 auto;
 }
 /* FOOTER */
 footer {
